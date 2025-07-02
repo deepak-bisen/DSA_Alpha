@@ -1,4 +1,4 @@
-package alpha;
+package DSA_Alpha.GreedyAlgo;
 import java.util.Arrays;
 public class MinAbsoluteDifferencePairsGreedy {
 public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package alpha;
+package DSA_Alpha.ArrayList;
 import java.util.ArrayList;
 //find if any pair in a sorted ArrayList has a target sum. return true if any.
 public class PairSumAL {

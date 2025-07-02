@@ -1,4 +1,4 @@
-package collectionframework;
+package DSA_Alpha.LinkedList;
 
 public class ZigZagLL {
 	// node creation (inner class)

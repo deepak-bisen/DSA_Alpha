@@ -6,7 +6,7 @@
   *Sample Input 1 : nums = [1,2,2,3]
   *Sample Output 1: true
   */
-package alpha;
+package DSA_Alpha.ArrayList;
 import java.util.ArrayList;
 public class MonotonicArrayList {
 

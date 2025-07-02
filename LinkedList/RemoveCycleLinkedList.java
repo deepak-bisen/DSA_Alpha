@@ -1,3 +1,4 @@
+package DSA_Alpha.LinkedList;
 class RemoveCycleLinkedList{
    	// node creation (inner class)
 	public class Node {

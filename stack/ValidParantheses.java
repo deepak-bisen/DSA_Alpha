@@ -1,4 +1,4 @@
-package alpha;
+package DSA_Alpha.stack;
 
 import java.util.*;
 

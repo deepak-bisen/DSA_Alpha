@@ -4,8 +4,9 @@
 * Time Complexity  : o(n)
 * Space Complexity: o(n)
 */
+package DSA_Alpha.LinkedList;
 
- import java.util.*;
+import java.util.*;
  class PalindromeLLStack {
  public static void main(String args[]){
  Node one = new Node(1);
@@ -19,8 +20,7 @@
  two.ptr = three;
  three.ptr = four;
  four.ptr = five;
- f
- ive.ptr = six;
+ five.ptr = six;
  six.ptr = seven;
  boolean condition = isPalindrome(one);
  System.out.println("Palindrome :" + condition);

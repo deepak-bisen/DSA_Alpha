@@ -1,4 +1,4 @@
-package alpha;
+package DSA_Alpha.Queue;
 
 import java.util.LinkedList;
 import java.util.Queue;

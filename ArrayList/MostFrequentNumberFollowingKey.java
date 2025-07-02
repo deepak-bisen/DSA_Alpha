@@ -17,7 +17,7 @@
  For target = 100, there are 2 occurrences at indices 1 and 4 which follow an occurrence of key.
  No other integers follow an occurrence of key, so we return 100.
 */
-package alpha;
+package DSA_Alpha.ArrayList;
 import java.util.ArrayList;
 
 public class MostFrequentNumberFollowingKey {

@@ -1,4 +1,4 @@
-package alpha;
+package DSA_Alpha.ArrayList;
 
 import java.util.ArrayList;
 

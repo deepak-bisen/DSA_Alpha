@@ -1,4 +1,4 @@
-package alpha;
+package DSA_Alpha.LinkedList;
 
 public class IsCycleLL {
 	   	// node creation (inner class)

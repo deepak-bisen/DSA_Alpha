@@ -1,4 +1,4 @@
-package alpha;
+package DSA_Alpha.GreedyAlgo;
 
 import java.util.Arrays;
 import java.util.Collections;
