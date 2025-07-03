@@ -59,6 +59,33 @@ public class TraversalBinaryTree {
 			preorder(root.right);
 		}
 
+		// Level Order Traversal using Queue
+		public static void levelOrder(Node root) {
+			if (root == null)
+				return;
+
+			java.util.Queue<Node> queue = new java.util.LinkedList<>();
+			queue.add(root);
+			queue.add(null);
+
+			while (!queue.isEmpty()) {
+				Node currNode = queue.remove();
+				if (currNode == null) {
+					System.out.println();
+					if(queue.isEmpty())
+						break;
+					else
+						queue.add(null);
+				} else {
+					System.out.print(currNode.data + " ");
+					if (currNode.left != null)
+						queue.add(currNode.left);
+					if (currNode.right != null)
+						queue.add(currNode.right);
+				}
+			}
+		}
+
 	}
 
 	public static void main(String[] args) {
@@ -76,8 +103,13 @@ public class TraversalBinaryTree {
 		tree.postorder(root);
 
 		System.out.println();
-		
+
 		System.out.print("In-order Traversal : ");
 		tree.inorder(root);
+
+		System.out.println();
+
+		System.out.println("Level-order Traversal : ");
+		tree.levelOrder(root);
 	}
 }
