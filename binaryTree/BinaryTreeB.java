@@ -27,6 +27,7 @@ public class BinaryTreeB {
 
 			return newNode;
 		}
+
 	}
 
 	public static void main(String[] args) {
@@ -34,5 +35,6 @@ public class BinaryTreeB {
 		BinaryTree tree = new BinaryTree();
 		Node root = tree.buildTree(nodes);
 		System.out.println("Root Of The Binary Tree: " + root.data);
+
 	}
 }
