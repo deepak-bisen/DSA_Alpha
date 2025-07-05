@@ -22,6 +22,7 @@ public class DiameterOfTree {
 			return Math.max(lh, rh) + 1;
 		}
 
+		//Approach-1
 		public static int diameter(Node root) {
 			//base case
 			if(root == null)
