@@ -3,7 +3,22 @@ package DSA_Alpha.binaryTree;
 import DSA_Alpha.binaryTree.SubtreeOfAnotherTree.Node;
 
 public class TopViewOfBinaryTree {
+	static class Node {
+		int data;
+		Node left, right;
 
+		public Node(int data) {
+			this.data = data;
+			this.left = null;
+			this.right = null;
+		}
+	}
+	
+
+	
+	public static void topView(Node root) {
+		
+	}
 	public static void main(String[] args) {
 		/**
 		 *     1
