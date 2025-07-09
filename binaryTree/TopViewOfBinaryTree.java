@@ -13,12 +13,19 @@ public class TopViewOfBinaryTree {
 			this.right = null;
 		}
 	}
-	
 
-	
-	public static void topView(Node root) {
-		
+	public static class Info {
+		int hd;
+		Node node;
+
+		public Info(Node node, int hd) {
+		}
 	}
+
+	public static void topView(Node root) {
+
+	}
+
 	public static void main(String[] args) {
 		/**
 		 *     1
