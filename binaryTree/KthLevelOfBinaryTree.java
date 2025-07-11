@@ -1,6 +1,5 @@
 package DSA_Alpha.binaryTree;
 
-import DSA_Alpha.binaryTree.TopViewOfBinaryTree.Node;
 
 public class KthLevelOfBinaryTree {
 
@@ -16,6 +15,18 @@ public class KthLevelOfBinaryTree {
 		}
 	}
 	
+	public static void kLevel(Node root, int level, int k) {
+		if(root == null)
+			return;
+		
+		if(level == k) {
+			System.out.println(root.data);
+			return;
+		}
+		
+		kLevel(root.left,level+1,k);
+		kLevel(root.right,level+1,k);
+	}
 	public static void main(String[] args) {
 		/**
 		 *     1
@@ -32,6 +43,9 @@ public class KthLevelOfBinaryTree {
 		root.left.right = new Node(5);
 		root.right.left = new Node(6);
 		root.right.right = new Node(7);
-
+		
+		int k = 3, level = 1;
+		
+		kLevel(root, level, k);
 	}
 }
