@@ -1,8 +1,5 @@
 package DSA_Alpha.binaryTree;
-
 import java.util.ArrayList;
-
-import DSA_Alpha.binaryTree.KthLevelOfBinaryTree.Node;
 
 public class LowestCommonAncestor {
 
@@ -17,6 +14,7 @@ public class LowestCommonAncestor {
 			this.right = null;
 		}
 	}
+	
 	public static boolean getPath(Node root, int n, ArrayList<Node> path) {
 		if(root == null)
 			return false;
@@ -45,7 +43,7 @@ public class LowestCommonAncestor {
 		
 		//last common ancestor
 		int i =0;
-		for(;i<path1.size() && path2.size();i++) {
+		for(;i < path1.size() && i < path2.size();i++) {
 			if(path1.get(i) != path2.get(i))
 				break;
 		}
@@ -54,6 +52,7 @@ public class LowestCommonAncestor {
 		Node lca = path1.get(i-1);
 		return lca;
 	}
+	
 	public static void main(String[] args) {
 		/**
 		 *     1
@@ -70,5 +69,10 @@ public class LowestCommonAncestor {
 		root.left.right = new Node(5);
 		root.right.left = new Node(6);
 		root.right.right = new Node(7);
-}}
+		
+		int n1  = 4, n2 = 6;
+		System.out.println("Lowest Common Ancestor For node "+n1+" and "+n2+" : "
+				+lca(root, n1, n2).data);
+  }
+}
 
