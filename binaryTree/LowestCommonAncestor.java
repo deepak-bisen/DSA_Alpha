@@ -17,7 +17,18 @@ public class LowestCommonAncestor {
 			this.right = null;
 		}
 	}
-	
+	public static boolean getPath(Node root, int n, ArrayList<Node> path) {
+		if(root == null)
+			return false;
+		
+		path.add(root);
+		
+		if(root.data == n)
+			return true;
+		
+		boolean foundLeft = getPath(root.left, n, path);
+		boolean foundRight= getPath(root.right, n, path);
+	}
 	public static Node lca(Node root, int n1, int n2) {
 		ArrayList<Node> path1 = new ArrayList<>();
 		ArrayList<Node> path2 = new ArrayList<>();
