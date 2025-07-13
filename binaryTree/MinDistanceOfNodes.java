@@ -15,7 +15,7 @@ public class MinDistanceOfNodes {
 		}
 	}
 	
-//	Approach 2
+//	lowest common ancestor
 	public static Node lca2(Node root, int n1, int n2) {
 		if(root == null || root.data == n1 || root.data == n2)
 			return root;
@@ -33,6 +33,25 @@ public class MinDistanceOfNodes {
 		
 		return root;
 				
+	}
+	
+	public static int lcaDist(Node root, int n) {
+//		base case
+		if(root == null)
+			return -1;
+		
+		if(root.data == n)
+			return 0;
+		
+		if()
+	}
+	
+	public static int minDist(Node root, int n1, int n2) {
+		Node lca = lca2(root,n1,n2);
+		int dist1 = lcaDist(lca,n1);
+		int dist2 = lcaDist2(lca,n2);
+		
+		return dist1 + dist2; 
 	}
 	public static void main(String[] args) {
 		/**
