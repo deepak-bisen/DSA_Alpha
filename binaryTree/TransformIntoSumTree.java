@@ -35,7 +35,7 @@ public class TransformIntoSumTree {
 		if(root == null)
 			return;
 		
-		System.out.println(root.data+" ");
+		System.out.print(root.data+" ");
 		preOrder(root.left);
 		preOrder(root.right);
 	}
@@ -67,6 +67,7 @@ public class TransformIntoSumTree {
 		
 		
         transform(root);
+        System.out.println("Transformation in Sum of three is in preorder sequence: ");
         preOrder(root);
 		
 	
