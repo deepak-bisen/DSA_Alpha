@@ -1,7 +1,5 @@
 package DSA_Alpha.binaryTree;
 
-import DSA_Alpha.binaryTree.LowestCommonAncestor.Node;
-
 public class MinDistanceOfNodes {
 	static class Node {
 		int data;
