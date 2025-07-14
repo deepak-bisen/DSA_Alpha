@@ -53,8 +53,8 @@ public class KAncestor {
 		
 		int n  = 5, k = 2;
 		
-		System.out.println("Kth ancestor of  "+n+" : "+
-				KthAncestor(root, n, k));
+		System.out.print(k+"th ancestor of "+n +" : ");
+				KthAncestor(root, n, k);
 		
 	
 }
