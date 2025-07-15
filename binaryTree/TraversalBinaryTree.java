@@ -91,25 +91,25 @@ public class TraversalBinaryTree {
 	public static void main(String[] args) {
 		int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
 		BinaryTree tree = new BinaryTree();
-		Node root = tree.buildTree(nodes);
+		Node root = BinaryTree.buildTree(nodes);
 		System.out.println("Root Of The Binary Tree: " + root.data);
 
 		System.out.print("Pre-order Traversal : ");
-		tree.preorder(root);
+		BinaryTree.preorder(root);
 
 		System.out.println();
 
 		System.out.print("Post-order Traversal : ");
-		tree.postorder(root);
+		BinaryTree.postorder(root);
 
 		System.out.println();
 
 		System.out.print("In-order Traversal : ");
-		tree.inorder(root);
+		BinaryTree.inorder(root);
 
 		System.out.println();
 
 		System.out.println("Level-order Traversal : ");
-		tree.levelOrder(root);
+		BinaryTree.levelOrder(root);
 	}
 }
