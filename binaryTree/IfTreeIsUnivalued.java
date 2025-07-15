@@ -44,6 +44,7 @@ public class IfTreeIsUnivalued {
 
 		root.right.right = newNode(1);
 
+		System.out.print("IS tree univalued : ");
 		if (isUnivalTree(root))
 			System.out.print("YES");
 		else
