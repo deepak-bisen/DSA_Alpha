@@ -2,7 +2,8 @@ package DSA_Alpha.Heap_PriorityQueue;
 
 import java.util.ArrayList;
 
-public class HeapDemo {
+public class MaxHeap {
+
 	static class Heap {
 
 		ArrayList<Integer> arr = new ArrayList<Integer>();
@@ -14,7 +15,7 @@ public class HeapDemo {
 			int x = arr.size() - 1; // x is child's index
 			int parent = (x - 1) / 2; // parent index
 
-			while (arr.get(x) < arr.get(parent)) {
+			while (arr.get(x) > arr.get(parent)) {
 				// swap
 				int temp = arr.get(x);
 				arr.set(x, arr.get(parent));
@@ -35,11 +36,11 @@ public class HeapDemo {
 			int right = 2 * i + 2;
 			int minIdx = i; // root
 
-			if (left < arr.size() && arr.get(minIdx) > arr.get(left)) {
+			if (left < arr.size() && arr.get(minIdx) < arr.get(left)) {
 				minIdx = left;
 			}
 
-			if (right < arr.size() && arr.get(minIdx) > arr.get(right)) {
+			if (right < arr.size() && arr.get(minIdx) < arr.get(right)) {
 				minIdx = right;
 			}
 
@@ -78,17 +79,17 @@ public class HeapDemo {
 	}
 
 	public static void main(String[] args) {
-		Heap h = new Heap();
-		h.add(3);
-		h.add(4);
-		h.add(1);
-		h.add(5);
+		Heap pq = new Heap();
+		pq.add(3);
+		pq.add(4);
+		pq.add(1);
+		pq.add(5);
 
-		System.out.println("min heap operations & implementing priority queue");
+		System.out.println("Max heap operations & implementing priority queue");
 
-		while (!h.isEmpty()) {
-			System.out.println(h.peek());
-			h.remove();
+		while (!pq.isEmpty()) {
+			System.out.println(pq.peek());
+			pq.remove();
 		}
 
 	}
