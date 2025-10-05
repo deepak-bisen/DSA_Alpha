@@ -16,26 +16,8 @@ public class GraphCreation {
 		}
 	}
 
-	public static void main(String[] args) {
-		/**
-		 *    (5) 
-		 * 0-------1 
-		 *        / \ 
-		 *    (1)/   \ (3) 
-		 *      /     \ 
-		 *     2-------3 
-		 *     |  (1) 
-		 *  (2)| 
-		 *     |
-		 *     4
-		 */
-
-		int vertex = 5;
-
-
-		ArrayList<Edge>[] graph = new ArrayList[vertex]; // null --> empty arraylist
-
-		for (int i = 0; i < vertex; i++) {
+	public static void createGraph(ArrayList<Edge> graph[]) {
+		for (int i = 0; i < graph.length; i++) {
 			graph[i] = new ArrayList<>();
 		}
 
@@ -59,11 +41,37 @@ public class GraphCreation {
 		// 4 -vertex
 		graph[4].add(new Edge(4, 2, 2));
 
+	}
+	
+	public static void main(String[] args) {
+		/**
+		 *    (5) 
+		 * 0-------1 
+		 *        / \ 
+		 *    (1)/   \ (3) 
+		 *      /     \ 
+		 *     2-------3 
+		 *     |  (1) 
+		 *  (2)| 
+		 *     |
+		 *     4
+		 */
+
+		int vertex = 5;
+		ArrayList<Edge>[] graph = new ArrayList[vertex]; // null --> empty arraylist
+
+		createGraph(graph);
+		
+		
 		// 2's neighbors
+		System.out.println("2's neighbors");
 		for (int i = 0; i < graph[2].size(); i++) {
 			Edge e = graph[2].get(i); // src, dest, weight
-			System.out.println(e.dest);
+			System.out.print(e.dest+" ");
 		}
+		
+		
+		
 	}
 
 }
