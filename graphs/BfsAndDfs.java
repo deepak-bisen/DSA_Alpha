@@ -2,7 +2,7 @@ package DSA_Alpha.graphs;
 
 import java.util.*;
 
-public class BFS {
+public class BfsAndDfs {
 
 	static class Edge {
 		int src;
@@ -72,6 +72,19 @@ public class BFS {
 			}
 		}
 	}
+	
+	public static void dfs(ArrayList<Edge>[] graph, int curr, boolean visited[]) {
+		//visit
+		System.out.print(curr+" ");
+		visited[curr] = true;
+		
+		for(int i= 0; i<graph[curr].size();i++) {
+			Edge e = graph[curr].get(i);
+			if(!visited[e.dest]) 
+				dfs(graph,e.dest,visited);
+		}
+	}
+	
 	public static void main(String[] args) {
 		/**
 		 *    1----3 
@@ -85,7 +98,15 @@ public class BFS {
 		ArrayList<Edge>[] graph = new ArrayList[vertex]; // null --> empty arraylist
 
 		createGraph(graph);
-		bfs(graph);
+		
+//		//bfs
+//		System.out.println("BFS");
+//		bfs(graph);
+//		System.out.println();
+
+		//dfs
+		System.out.println("DFS");
+		dfs(graph,0,new boolean[vertex]);
 		
 		
 		
